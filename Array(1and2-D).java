@@ -47,6 +47,27 @@ public class Array {
          }
          //print array length
          System.out.println(B.length);*/
+            
+          /* How to input take from Array */
+          
+          /*int n,i;
+      Scanner sc=new Scanner(System.in);
+      System.out.println("Enter the number of elementa u want to store:");
+      n=sc.nextInt();
+      
+      int arr[]=new int[10];
+      System.out.println("enter the elements of array");
+      
+      for( i=0;i<arr.length;i++)
+      {
+          arr[i]=sc.nextInt();
+      }
+      
+      for(i=0;i<arr.length;i++)
+      {
+          System.out.print(arr[i]+",");
+      }System.out.println("");*/
+      
          
             /* Student Challenge */
             /*1. Find the sum of Array*/
