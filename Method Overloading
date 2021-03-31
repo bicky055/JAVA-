@@ -1,0 +1,39 @@
+
+package method.overloding;
+//method overloading means in java the function is same but these parameter datatype 
+//and its not depand on return type 
+public class MethodOverloding {
+
+    static int max(int x,int y)
+    {
+        return x>y?x:y;
+    }
+    
+    static float max(float x,float y)
+    {
+        //this is working both int and float 
+        if(x>y)
+            return x;
+        else
+            return y;
+    }
+    static int max(int x,int y,int z)
+    {
+        return (x>y && x>z)?x:(y>z?y:z);
+    }  
+    static byte max(byte x,byte y)
+    {
+        //if main fun byte is not difind then it is not working 
+        return x>y?x:y;
+    }        
+    public static void main(String[] args) {
+        
+        //System.out.println(max(10,5));
+        //System.out.println(max(10.5f,5.2f));
+        //System.out.println(max(10,50,15));
+        
+        byte a=10,b=5;
+        System.out.println(max(a,b));
+    }
+    
+}
