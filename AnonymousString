@@ -1,0 +1,30 @@
+
+package variablearguments;
+
+
+public class VariableArguments {
+  
+    static void showList(String ...S)
+    {
+        for(int i=0;i<S.length;i++)
+        {
+            System.out.println(i+1+"."+S[i]);
+        }
+    }
+    static void showList(int start,String ...S)
+    {
+        for(int i=0;i<S.length;i++)
+        {
+            System.out.println(start+"."+S[i]);
+            start++;
+        }
+    }
+    
+    public static void main(String ...args) {
+        
+        showList("bicky","jhon","Ajay","satish");
+        showList(10,"bicky","jhon","Ajay","satish");
+ 
+    }
+    
+}
