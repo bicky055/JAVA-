@@ -1,0 +1,102 @@
+
+package methodpractices;
+
+import java.util.Scanner;
+
+public class MethodPractices {
+
+    static void change(int B[],int index,int value)
+    {
+        B[index]=value;
+    }
+    static void change2(int x,int value)
+    {
+        x=value;
+    }
+    
+    static boolean isPrime(int n)
+    {
+        for(int i=2;i<n/2;i++)
+        {
+            if(n%i==0)
+                return false;
+        }
+        return true;
+    }
+    
+    static int GCD(int m,int n)
+    {
+        while(m!=n)
+        {
+        if(m>n)
+         m = m-n;
+        else
+          n = n-m;
+       }
+            return n;
+    }
+    static int max(int A[])
+    {
+        int Max=A[0];
+        for(int i=0;i<A.length;i++)
+        {
+          if(A[i]>Max) 
+              Max=A[i];
+        }
+        return Max;
+    }
+    public static void main(String[] args) {
+        
+        /*int A[]={2,4,6,8,10};
+        
+        change(A,2,20);
+        for(int x:A)
+        {
+        System.out.println(x);
+        }*/
+        
+        /*int x=10;
+        change2(x,20);
+        System.out.println("value of primitive "+x);*/
+        
+        /*Scanner sc=new Scanner(System.in);
+        System.out.println("Enter a number");
+        int x=sc.nextInt();
+        if(isPrime(x))
+           System.out.println("the number is prime "+x);
+        else
+            System.out.println("the number is not prime "+x);*/
+        
+        /*Scanner sc=new Scanner(System.in);
+        System.out.println("Enter two numbers");
+        int x=sc.nextInt();
+        int y=sc.nextInt();
+        int A=GCD(x,y);
+        System.out.println("Greatest comman factor is  "+A);*/
+        
+//        int B[]={5,8,6,42,410,32,45,10};
+//         System.out.println(max(B));
+
+      int n,i;
+      Scanner sc=new Scanner(System.in);
+      System.out.println("Enter the number of elementa u want to store:");
+      n=sc.nextInt();
+      
+      int arr[]=new int[10];
+      System.out.println("enter the elements of array");
+      
+      for( i=0;i<arr.length;i++)
+      {
+          arr[i]=sc.nextInt();
+      }
+      
+      for(i=0;i<arr.length;i++)
+      {
+          System.out.print(arr[i]+",");
+      }System.out.println("");
+      
+      System.out.println(max(arr));
+    }
+        
+    
+}
