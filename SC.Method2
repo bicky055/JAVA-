@@ -1,0 +1,62 @@
+
+package scmethodoverloading;
+
+
+public class SCMethodoverloading {
+
+    //Calculate Area By using Method Overloading
+    static double Area(double l,double b)
+    {
+        return l*b;
+    }
+    static double Area(double r)
+    {
+        double a;
+        return a=Math.PI*r*r;
+    }
+    static double Area(double l,double b,double h)
+    {
+        double area=h/2*(l+b);
+        return area;
+    }
+       
+    //2.using Method Overloading reverse an number and Array
+    
+    static int Reverse(int n)
+    { 
+        int rev=0;
+        while(n>0)
+        {
+            int r=n%10;
+            rev=rev*10+r;
+            n=n/10;
+        }
+        return rev;
+    }
+    
+    static int[] Reverse(int A[])
+    {
+        int arr[]=new int [A.length];
+        for(int i=A.length-1,j=0;i>=0;i--,j++)
+        {
+            arr[j]=A[i];
+        }
+         return arr;   
+                
+    }
+    
+    static boolean Validate(String name)
+    {
+        return name.matches("[a-zA-Z\\s]+");
+    }   
+      
+    static boolean validate(int age)
+    {
+        return age>=3 && age<=15;
+    }
+    public static void main(String[] args) {
+        
+
+    }
+    
+}
