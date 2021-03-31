@@ -1,0 +1,62 @@
+
+package variablearguments;
+
+
+public class VariableArguments {
+  
+    static int Max(int ...A)
+    {
+        if(A.length==0)
+            return Integer.MIN_VALUE;
+        int max=A[0];
+        for(int i=0;i<A.length;i++)
+        {
+            if(A[i]>max)
+              max=A[i];
+            }
+        return max;
+        
+    }
+    
+    static int Sum(int ...S)
+    {
+        int sum=0;
+        for(int i=0;i<S.length;i++)
+        {
+            sum+=S[i];
+        }
+        return sum;
+    }
+    
+    static double Discount(double ...prices)
+    {
+        int totalAmount=0;
+        for(int i=0;i<prices.length;i++)
+        {
+            totalAmount+=prices[i];
+        }
+        if(totalAmount<=500)
+            return totalAmount*0.05;
+        else if(totalAmount>500 && totalAmount<=1000)
+            return totalAmount*0.10;
+        else 
+            return totalAmount*.20;
+            
+    }
+    
+    
+    public static void main(String ...args) {
+        
+        System.out.println(Max());
+        System.out.println(Max(10));
+        System.out.println(Max(10,206,60));
+        
+         System.out.println(Sum());
+         System.out.println(Sum(10,20,30));
+         
+         System.out.println(Discount());
+         System.out.println(Discount(100));
+         System.out.println(Discount(500,400,600,400));
+    }
+    
+}
