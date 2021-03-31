@@ -1,0 +1,27 @@
+
+package variablearguments;
+
+
+public class VariableArguments {
+  
+    static void show(int ...A)//it is an array repersentation (int A[])
+    {
+        for(int x:A)
+        {
+            System.out.println(x);
+        }
+    }
+    
+    public static void main(String[] args) {
+        
+        show();
+        show(10,20,30);
+        show(new int[]{2,6,4,5,8,55});
+ //this is called Anonymous Array
+ //here we can create an array without name,such type of nameless Array is called anonymous Array
+ 
+ 
+ 
+    }
+    
+}
