@@ -15,6 +15,13 @@ class Rectangle1
     {
         return 2*(length+breadth);
     }
+    public boolean isSquare()
+    {
+        if(length==breadth)
+            return true;
+        else
+            return false;
+    }
     
 }
 
@@ -23,19 +30,21 @@ public class Circle {
     
     public static void main(String[] args) 
     {
-        Rectangle1 c1=new Rectangle1();//object 1
-        Rectangle1 c2=new Rectangle1();//object 2
-        c1.length=10;
-        c1.breadth=20;
+        Rectangle1 r=new Rectangle1();//object 1
+        Rectangle1 r1=new Rectangle1();//object 2
+        r.length=10;
+        r.breadth=20;
       
-        c2.length=15;
-        c2.breadth=25;
+        r1.length=15;
+        r1.breadth=15;
         
-        System.out.println("Area :"+c1.area());
-        System.out.println("perimeter :"+c1.perimeter());
+        System.out.println("Area :"+r.area());
+        System.out.println("perimeter :"+r.perimeter());
+        System.out.println("its a square"+r.isSquare());
         
-        System.out.println("Area :"+c2.area());
-        System.out.println("perimeter :"+c2.perimeter());
+        System.out.println("Area :"+r1.area());
+        System.out.println("perimeter :"+r1.perimeter());
+        System.out.println("its a square"+r1.isSquare());
     }
     
 }
