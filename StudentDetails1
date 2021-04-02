@@ -1,0 +1,59 @@
+
+package studenttest;
+
+//properties
+
+class Student
+{
+    //properties
+    public int roll;
+    public String name;
+    public String course;
+    public int m1,m2,m3;
+    
+    //Method
+    
+    public int  TotalMarkes()
+    {
+        return (m1+m2+m3);
+    }
+    public float Avg()
+    {
+        return (float)TotalMarkes()/3;
+    }
+    public char Grade()
+    {
+        if(Avg()>=70)
+            return 'A';
+        else
+            return 'B';
+    }
+    
+    public String Tostring()
+    {
+        return "Roll No:"+roll+"\n"+"Name:"+name+"\n"+"Course:"+course+"\n";
+    }
+}
+
+public class StudentTest {
+
+    
+    public static void main(String[] args) {
+        
+        Student s=new Student();
+        
+        s.roll=1053;
+        s.name="bicky jha";
+        s.course="Computer science";
+        s.m1=80;
+        s.m2=75;
+        s.m3=85;
+        
+        System.out.println("Total markes :"+s.TotalMarkes());
+        System.out.println("Average :"+s.Avg());
+        System.out.println("grade is:"+s.Grade());
+        System.out.println("Details:\n "+ s.Tostring() );
+        
+    }
+    
+}
