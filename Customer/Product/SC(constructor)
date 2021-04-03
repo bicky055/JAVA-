@@ -1,0 +1,106 @@
+package scproducts;
+
+class product
+{
+    //Propetties
+    private String Itemno;
+    private String Name;
+    private double Price;
+    private int qty;
+    
+    //Propetties Method
+    
+    public String setItemno()
+    {
+        return Itemno; 
+    }
+    public String setName()
+    {
+        return Name;
+    }
+    public double setPrice()
+    {
+        return Price;
+    }
+    public int setqty()
+    {
+        return qty;
+    }
+    public void setPrice(double p)
+    {
+        this.Price=p;
+    }
+    public void setqty(int q)
+    {
+        this.qty=q;
+    }
+    
+    //constrector
+    
+    public product(String itemno)
+    {
+        Itemno=itemno;
+    }
+    public product(String itemno,String name)
+    {
+        Itemno=itemno;
+        this.Name=name;
+    }
+    public product(String itemno,String name,double p,int q)
+    {
+        Itemno=itemno;
+        this.Name=name;
+        setPrice(p);
+        setqty(q);
+    }
+}
+
+class Customer
+{
+    //properties
+    private String custId;
+    private String name;
+    private String Address;
+    private String PhNo;
+    
+    //propeties method
+    
+    public String getcustId(){return custId ;}
+    public String getnName(){ return name; }
+    public String getaddress(){ return Address;}
+    public String getphno(){ return PhNo;}
+    
+    public void setadd(String add)
+    {
+        this.Address=add;
+    }
+    public void setphno(String phno)
+    {
+        this.PhNo=phno;
+    }
+    
+    //constructor
+    
+    public Customer(String custId,String name)
+    {
+        this.custId=custId;
+        this.Address=name;
+    }
+    public Customer(String cusId,String name,String add,String phno)
+    {
+        this.custId=custId;
+        this.Address=name;
+        setphno(phno);
+        setadd(add);
+    }
+}
+
+
+public class SCProducts {
+
+    
+    public static void main(String[] args) {
+        
+    }
+    
+}
