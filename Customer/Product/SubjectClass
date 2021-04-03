@@ -1,0 +1,77 @@
+
+package scpropertiesof.constructors;
+
+class Subject
+
+{
+    private String subID;
+    private String name;
+    private int maxMarks;
+    private int marksObtain;
+    
+    public String getsubid()
+    {
+        return subID;
+    }
+    public String getname()
+    {
+        return name;
+    }
+    public int getmaxmarks()
+    {
+        return maxMarks;
+    }
+    public int getmarksobtain()
+    {
+        return marksObtain;
+    }
+    
+    public void setMaxMarks(int mm)
+    {
+        maxMarks=mm;
+    }
+    public void MarksObtain(int m)
+    {
+        marksObtain=m;
+    }
+    
+    //constructor
+    public Subject(String subid,String name)
+    {
+        this.subID=subid;
+        this.name=name;
+    }
+    public Subject(String id,String name,int mm)
+    {
+        this.subID=id;
+        this.name=name;
+        this.maxMarks=mm;
+    }
+    
+     boolean isQualified()
+    {
+        return marksObtain>=maxMarks/10*4;
+    }
+    
+    public String toString()
+    {
+        return"\n SubjectID: "+subID+"\n Name "+name+"\n MarksObtained "+marksObtain;
+    }
+}
+public class ScPropertiesofConstructors {
+
+    
+    public static void main(String[] args) {
+        
+        Subject subs[]=new Subject[3];
+        subs[0]=new Subject("cs101","DS",100);
+        subs[1]=new Subject("cs102","Algoritham",100);
+        subs[2]=new Subject("cs103","opreting system",100);
+        
+        for(Subject S:subs)
+            System.out.println(S);
+        
+        
+    }
+    
+}
