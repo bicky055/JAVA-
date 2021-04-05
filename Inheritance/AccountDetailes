@@ -1,0 +1,75 @@
+
+package accountdetailes;
+
+class Account
+{
+    //properties
+    private String AccNo;
+    private String Name;
+    private String Address;
+    private String PhNo;
+    private String DOB;
+    protected long balance;
+    //coustructor
+    
+    public Account(String acc,String name,String add,String phno,String dob)
+    {
+        AccNo=acc;
+        Name=name;
+        Address=add;
+        PhNo=phno;
+        DOB=dob;
+        balance=0;
+    }
+    
+    //properties Methods
+    
+    public String getAccno(){return AccNo;}
+    public String getname(){ return Name;}
+    public String getaddress(){return Address;}
+    public String getphno(){ return PhNo;}
+    public String getdOb(){ return DOB;}
+    public long getbalance(){return balance;}
+    
+    public void setAddress(String Add)
+    {
+        Address=Add;
+    }
+    public void setDoB(String DofB)
+    {
+        DOB=DofB;
+    }
+    
+}
+
+class SavingsAccount extends Account
+{
+    public void Deposit(long amt)
+    {
+        balance=balance+amt;
+    }
+    public void Withdrol(long amt)
+    {
+        balance=balance-amt;
+    }
+    
+}
+class LoanAccount extends Account
+{
+    public void payEMI(long amt)
+    {
+        balance-=amt;
+    }
+    public void repay(long amt)
+    {
+        if(balance==amt)
+            balance=0;
+    }
+}
+public class AccountDetailes {
+
+    public static void main(String[] args) {
+        
+    }
+    
+}
