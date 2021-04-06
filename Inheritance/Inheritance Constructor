@@ -1,0 +1,38 @@
+
+package inheritanceconstructor;
+
+class parent
+{
+    public parent()
+    {
+        System.out.println("parent Constructor");
+    }
+}
+
+class child extends parent
+{
+    public child()
+    {
+        System.out.println("child constructor");
+    }
+}
+
+class Grandchild extends child
+{
+    public Grandchild()
+    {
+        System.out.println("GrandChild Constructor");
+    }
+}
+
+public class InheritanceConstructor {
+
+   
+    public static void main(String[] args) {
+        
+        Grandchild c=new Grandchild();
+        //child c1=new child();
+        //parent c2=new parent();
+    }
+    
+}
