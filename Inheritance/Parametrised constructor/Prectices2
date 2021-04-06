@@ -1,0 +1,55 @@
+
+package parametrisedconstructor;
+
+class Rectangle
+{
+    public double length;
+    public double breadth;
+    Rectangle()
+    {
+        length=breadth=1;
+    }
+    Rectangle(int l,int b)
+    {
+        length=l;
+        breadth=b;
+    }
+}
+
+class Cuboid extends Rectangle
+{
+    public double height;
+    Cuboid()
+    {
+        height=1;
+    }
+    Cuboid(int h)
+    {
+        height=h;
+    }
+    double volume()
+    {
+        return length*breadth*height;
+    }
+    Cuboid(int l,int b,int h)
+    {
+        super(l,b);
+        height=h;
+    }
+}
+public class ParametrisedConstructor {
+
+    
+    public static void main(String[] args) {
+        
+        Cuboid c=new Cuboid();
+        System.out.println("volume is "+c.volume());
+        
+        Cuboid c1=new Cuboid(10);
+        System.out.println("volume is "+c1.volume());
+        
+        Cuboid c2=new Cuboid(10,10,5);
+        System.out.println("volume is "+c2.volume());
+    }
+    
+}
