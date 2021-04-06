@@ -1,0 +1,40 @@
+
+package method.override;
+
+class TV 
+{
+    public void switchOn(){System.out.println("Switch on tv"); }
+    
+    public void changeChannel(){ System.out.println("Change tv channel");}
+    
+  }
+
+class SmartTV extends TV
+{
+     @Override
+     public void switchOn(){System.out.println("Switch on tv"); }
+    @Override
+    public void changeChannel(){ System.out.println("Change tv channel");}
+    
+    public void Browse(){ System.out.println("Smart TV browsing"); }
+    
+}
+
+public class MethodOverRide {
+
+    
+    public static void main(String[] args) {
+        
+//        TV t=new TV();
+//        t.changeChannel();
+//        t.switchOn();
+
+          TV t=new SmartTV();
+          t.changeChannel();
+          //t.Browse(); no output
+          
+          SmartTV S=new SmartTV();
+          S.Browse();
+    }
+    
+}
