@@ -1,0 +1,35 @@
+
+package overridingcar;
+
+class Car
+{
+    public void Start(){ System.out.println("car is start"); }
+    
+    public void accelerate(){ System.out.println("car is accelerate"); }
+    
+    public void changeGear(){ System.out.println("car gearchange");}
+}
+
+class LuxaryCar extends Car
+{
+     public void changeGear(){ System.out.println("Luxarycar gearchange");}
+     public void OpenRoof(){ System.out.println("luxarycar sun roof open"); }
+}
+public class OverridingCar {
+
+    
+    public static void main(String[] args) {
+        
+//        Car c=new Car();
+//        c.Start();
+//        c.accelerate();
+//        c.changeGear();
+          
+          Car c1=new LuxaryCar();
+          c1.Start();
+          c1.accelerate();
+          //this o/p come to laxuraycar class
+          c1.changeGear();
+    }
+    
+}
