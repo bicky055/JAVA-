@@ -1,0 +1,47 @@
+
+package dynamicmethoddispatch;
+class Super
+{
+    public void Method1()
+    {
+        System.out.println("super meth1");
+    }
+    
+    public void Method2()
+    {
+        System.out.println("super meth2");
+    }
+}
+
+class Sub extends Super
+{
+    @Override
+    public void Method2()
+    {
+       System.out.println("sub meth2");   
+    }
+    
+    public void Method3()
+    {
+        System.out.println("sub meth3");
+    }
+}
+
+public class DynamicMethodDispatch {
+
+    
+    public static void main(String[] args) {
+        
+//        Sub s=new Sub();
+//        s.Method1();
+//        s.Method2();
+//        s.Method3();
+
+//Dynamic Method Dispatch 
+          Super sc=new Sub();
+//here super is refrance and sub() object 
+          sc.Method1();
+          sc.Method2();
+    }
+    
+}
