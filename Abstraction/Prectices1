@@ -1,0 +1,39 @@
+
+package abstract1;
+
+ abstract class Super
+ {
+     public Super(){ System.out.println("Super Constructor"); }
+     
+     public void Meth1()
+     {
+         System.out.println("Super Meth1");
+     }
+     
+     abstract public void Meth2();
+ }
+
+class Sub extends Super
+{
+    @Override
+    public void Meth2()
+    {
+        System.out.println("Sub Meth2");
+    }
+}
+public class Abstract1 {
+
+    
+    public static void main(String[] args) {
+//when no any  abstract classs 
+//        Super s=new Super();
+//        s.Meth1();
+
+         Super s=new Sub();
+         s.Meth1();
+         s.Meth2();
+
+
+    }
+    
+}
