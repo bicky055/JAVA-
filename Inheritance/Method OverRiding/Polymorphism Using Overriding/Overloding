@@ -1,0 +1,33 @@
+// In java Polymorphism is achive in two time
+// Run time Polymorphism using Overriding 
+//Compile time Polymorphism using Overloading
+package overloading;
+
+class Test
+{
+    public int Max(int a,int b)
+    {
+        return a>b?a:b;
+    }
+    
+    public int Max(int a,int b,int c)
+    {
+        if(a>b && a>c)
+            return a;
+        else if(b>c)
+            return b;
+        return c;
+    }
+}
+
+public class OverLoading {
+
+    
+    public static void main(String[] args) {
+       
+        Test t=new Test();
+        t.Max(10, 50);
+        t.Max(51, 41, 56);
+    }
+    
+}
