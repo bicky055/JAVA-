@@ -1,0 +1,29 @@
+// In java Polymorphism is achive in two time
+// Run time Polymorphism using Overriding 
+//Compile time Polymorphism using Overloading
+package overriding;
+
+class Super 
+{
+     protected void Display()
+     {
+         System.out.println("Display Super");
+     }
+}
+class Sub extends Super
+{
+    public void Display()
+    {
+        System.out.println("Display Sub");
+    }
+}
+public class OverRiding {
+
+    
+    public static void main(String[] args) {
+       
+        Super s=new Sub();
+        s.Display();
+    }
+    
+}
