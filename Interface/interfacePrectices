@@ -1,0 +1,42 @@
+package interfacepractice;
+
+interface you
+{
+    void Meth1();
+    void Meth2();
+}
+
+class My implements you
+{
+    public void Meth1()
+    {
+        System.out.println("Meth1 of class my");
+    }
+    public void Meth2()
+    {
+        System.out.println("meth2 of class my");
+    }
+    public void Meth3()
+    {
+        System.out.println("meth3 of class my");
+    }
+}
+
+public class InterfacePractice {
+
+   
+    public static void main(String[] args) {
+        // TODO code application logic here
+        
+        you o=new My();
+        o.Meth1();
+        o.Meth2();
+        
+        My m=new My();
+        m.Meth1();
+        m.Meth2();
+        m.Meth3();
+        
+    }
+    
+}
