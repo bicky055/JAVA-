@@ -1,0 +1,33 @@
+
+package localinner;
+
+class Outer
+{
+    public void Display()
+    {
+        class Inner
+        {
+            public void Show()
+            {
+                System.out.println("Hello");
+            }
+        }
+        //local 
+        Inner i=new Inner();
+        i.Show();
+        //Anonymous Object
+        new Inner().Show();
+    }
+}
+
+public class LocalInner {
+
+    
+    public static void main(String[] args) {
+        // TODO code application logic here
+        
+        Outer o=new Outer();
+        o.Display();
+    }
+    
+}
