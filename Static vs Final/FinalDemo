@@ -1,0 +1,38 @@
+
+package finaldemo;
+
+class Test
+{
+    public final void show()
+    {
+        System.out.println("hello");
+    }
+}
+class Test1 extends Test
+{
+   // public void show(){} //not allow
+}
+
+public class Finaldemo {
+
+      /*static  final float PI ;
+        
+        static
+        {
+         PI=3.145f;
+        }*/
+     /*final float PI;
+     
+     public Finaldemo()
+     {
+         PI=3.145f;
+     }*/
+    
+    public static void main(String[] args) {
+        
+        /*final float PI=3.145f;
+        System.out.println(PI);*/
+         
+    }
+    
+}
