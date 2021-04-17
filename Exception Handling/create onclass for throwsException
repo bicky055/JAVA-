@@ -1,0 +1,38 @@
+
+package throwthrowsdemo;
+
+class NegativDimentionException extends Exception
+{
+    public String toString()
+    {
+        return "Dimention of rectangle cannot Negative";
+    }
+}
+
+public class ThrowThrowsdemo {
+
+    static int area(int l,int b) throws NegativDimentionException
+{
+    if(l<0 || b<0)
+        throw new NegativDimentionException();
+       return l*b;
+}
+    static void meth1() throws NegativDimentionException
+    {
+        System.out.println("Area is "+area(10,-5));
+    }
+    
+    public static void main(String[] args) {
+        
+        try
+        {
+            meth1();
+        }
+        catch(NegativDimentionException e)
+        {
+            System.out.println(e);
+        }
+        
+    }
+    
+}
